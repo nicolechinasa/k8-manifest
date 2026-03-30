@@ -13,8 +13,8 @@ spec:
         app: frontend-banking-deployment
     spec:
       containers:
-      - name: frontend-banking-container
-        image: 710463677593.dkr.ecr.us-east-1.amazonaws.com/bank-frontend:32
+      - name: frontend-bank-container
+        image: registry.digitalocean.com/testnico-registry/bank-app-frontend:staging-8f4e29d6a0c01acc3f2e5157cd682943f286903f
         ports:
         - containerPort: 3000
         env:
