@@ -1,9 +1,35 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: frontend-banking-deployment
+# spec:
+#   replicas: 1 
+#   selector:
+#     matchLabels:
+#       app: frontend-banking-deployment
+#   template:
+#     metadata:
+#       labels:
+#         app: frontend-banking-deployment
+#     spec:
+#       containers:
+#       - name: frontend-bank-container
+#         image: registry.digitalocean.com/testnico-registry/bank-app-frontend:staging-8f4e29d6a0c01acc3f2e5157cd682943f286903f
+#         ports:
+#         - containerPort: 3000
+#         env:
+#         - name: REACT_APP_API_URL
+#           valueFrom:
+#             configMapKeyRef:
+#               name: bank-config
+#               key: REACT_APP_API_URL
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-banking-deployment
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: frontend-banking-deployment
@@ -12,6 +38,8 @@ spec:
       labels:
         app: frontend-banking-deployment
     spec:
+      imagePullSecrets:
+      - name: registry-entercloud-repo
       containers:
       - name: frontend-bank-container
         image: registry.digitalocean.com/testnico-registry/bank-app-frontend:staging-8f4e29d6a0c01acc3f2e5157cd682943f286903f
@@ -19,7 +47,4 @@ spec:
         - containerPort: 3000
         env:
         - name: REACT_APP_API_URL
-          valueFrom:
-            configMapKeyRef:
-              name: bank-config
-              key: REACT_APP_API_URL
+          value: "http://bankapi.209.38.118.23.nip.io"
