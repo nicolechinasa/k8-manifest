@@ -28,6 +28,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-banking-deployment
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -47,4 +48,4 @@ spec:
         - containerPort: 3000
         env:
         - name: REACT_APP_API_URL
-          value: "http://bankapi.209.38.118.23.nip.io"
+          value: "http://bankapi.152.42.157.130.nip.io"
