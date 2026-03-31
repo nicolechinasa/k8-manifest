@@ -40,7 +40,7 @@ spec:
         app: frontend-banking-deployment
     spec:
       imagePullSecrets:
-      - name: registry-entercloud-repo
+      - name: registry-testnico-registry
       containers:
       - name: frontend-bank-container
         image: registry.digitalocean.com/testnico-registry/bank-app-frontend:staging-8f4e29d6a0c01acc3f2e5157cd682943f286903f
