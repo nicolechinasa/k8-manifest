@@ -48,4 +48,4 @@ spec:
         - containerPort: 3000
         env:
         - name: REACT_APP_API_URL
-          value: "http://bankapi.152.42.157.130.nip.io"
+          value: "http://bankapi.143.198.247.45.nip.io"
