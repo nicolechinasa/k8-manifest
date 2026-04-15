@@ -39,13 +39,13 @@ spec:
       labels:
         app: frontend-banking-deployment
     spec:
-      imagePullSecrets:
-      - name: registry-testnico-registry
+#      imagePullSecrets:
+#      - name: registry-testnico-registry
       containers:
       - name: frontend-bank-container
-        image: registry.digitalocean.com/testnico-registry/bank-app-frontend:staging-8f4e29d6a0c01acc3f2e5157cd682943f286903f
+        image: us-central1-docker.pkg.dev/development-423908/bank-repo/bank-app@sha256:11a50adf902c4f669d7d0098ae167ff8545a5eebd6fc0c86bdf4e791584822c7
         ports:
         - containerPort: 3000
         env:
         - name: REACT_APP_API_URL
-          value: "http://bankapi.143.198.247.45.nip.io"
+          value: "http://bankapi.34.138.187.167"

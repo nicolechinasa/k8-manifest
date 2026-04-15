@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bank-backend-container
-        image: 710463677593.dkr.ecr.us-east-1.amazonaws.com/bank-backendapi:34
+        image: us-central1-docker.pkg.dev/development-423908/bank-repo/bank-app@sha256:f264ca20baa5741658b4fa44037a7dad37bcab0a81ffddfb9b2d97a9d4df14fd
         ports:
         - containerPort: 8080
         env:
