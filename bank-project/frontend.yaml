@@ -41,6 +41,7 @@ spec:
     spec:
 #      imagePullSecrets:
 #      - name: registry-testnico-registry
+      serviceAccountName: bank-app-ksa
       containers:
       - name: frontend-bank-container
         image: us-central1-docker.pkg.dev/development-423908/bank-repo/bank-app@sha256:11a50adf902c4f669d7d0098ae167ff8545a5eebd6fc0c86bdf4e791584822c7

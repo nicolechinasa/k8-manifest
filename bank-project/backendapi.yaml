@@ -13,6 +13,7 @@ spec:
       labels:
         app: bank-backend-deployment
     spec:
+      serviceAccountName: bank-app-ksa
       containers:
       - name: bank-backend-container
         image: us-central1-docker.pkg.dev/development-423908/bank-repo/bank-app@sha256:f264ca20baa5741658b4fa44037a7dad37bcab0a81ffddfb9b2d97a9d4df14fd
@@ -44,7 +45,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: bank-secret
-              key: DB_PASSWORD
+              key: DB_PASSWORD          
         resources:
           requests:
             memory: "256Mi"
