@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: bank-config
 data:
-  DB_HOST: "34.27.23.176"
+  DB_HOST: "34.27.127.27"
   DB_PORT: "3306"
   DB_NAME: "online_banking_system"
-  REACT_APP_API_URL: https://bankapi.teamcloudup.online
+  REACT_APP_API_URL: bank.34.67.48.38.nip.io
