@@ -44,7 +44,7 @@ spec:
       serviceAccountName: bank-app-ksa
       containers:
       - name: frontend-bank-container
-        image: us-central1-docker.pkg.dev/development-423908/bank-repo/bank-app@sha256:11a50adf902c4f669d7d0098ae167ff8545a5eebd6fc0c86bdf4e791584822c7
+        image: us-central1-docker.pkg.dev/development-423908/bank-repo/bank-app@sha256:f90f3855979b3d6d9ae2155354d309ebf7b0f0e3823a7b4ec042adcfb0d17290
         ports:
         - containerPort: 3000
         env:
