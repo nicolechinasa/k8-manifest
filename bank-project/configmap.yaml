@@ -6,4 +6,4 @@ data:
   DB_HOST: "136.116.88.152"
   DB_PORT: "3306"
   DB_NAME: "online_banking_system"
-  REACT_APP_API_URL: bank.34.136.233.124.nip.io
+  REACT_APP_API_URL: bankapi.34.136.233.124.nip.io
